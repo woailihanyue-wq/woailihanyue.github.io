@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>开州印 KAIZHOUYIN｜一城山水 · 一罐人情</title>
+  <meta name="description" content="开州印（KAIZHOUYIN）· 千年贡茶，源自龙珠山。开州贡珍，以高山云雾之润、嘉陵清流之养，成就一叶清香。" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta property="og:title" content="开州印 KAIZHOUYIN" />
+  <meta property="og:description" content="一城山水 · 一罐人情" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/hero.jpg" />
+  <style>
+    :root{
+      --bg:#0b1a12; --ink:#0e2219; --card:#0f241b; --line:rgba(255,255,255,.08);
+      --text:#e8f5ee; --muted:#a7b9b0; --accent:#7fd4a9; --gold:#c3a86b;
+      --btn:#8bd6b2; --btnText:#0b1a12;
+      --green:#87c6a3;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family: system-ui, -apple-system, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif;background:linear-gradient(160deg,#0a1510,#0f241b 60%,#0a1510);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:18px}
+    header.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:44px;height:44px;border-radius:10px;border:1px solid var(--line);
+      display:grid;place-items:center;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+      font-weight:800;color:var(--accent);
+    }
+    .brandname{line-height:1.1}
+    .brandname b{display:block;font-size:15px;letter-spacing:.1em}
+    .brandname span{display:block;font-size:11px;color:var(--muted);letter-spacing:.3em}
+    nav a{font-size:14px;color:var(--muted);margin:0 8px;padding:6px 8px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .hero{
+      position:relative;height:min(56vw,520px);border-radius:22px;overflow:hidden;border:1px solid var(--line);
+      background:#000;
+    }
+    .hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.78) saturate(1.02)}
+    .hero .overlay{
+      position:absolute;inset:0;background:linear-gradient(120deg,rgba(11,26,18,.55),transparent 50%, rgba(0,0,0,.35) 100%);
+    }
+    .hero .copy{
+      position:absolute;left:28px;bottom:28px;max-width:72%;padding:14px 16px 16px 12px;
+      backdrop-filter: blur(2px);
+    }
+    .kicker{font-size:12px;letter-spacing:.5em;color:var(--muted);margin-bottom:6px}
+    h1.heroTitle{margin:0;font-size:28px;line-height:1.35}
+    .slogan{font-size:14px;margin-top:8px;color:#d6eee3}
+    .badge{position:absolute;right:18px;top:18px;background:rgba(0,0,0,.35);border:1px solid var(--line);padding:10px 12px;border-radius:14px;font-size:12px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}
+    .col-8{grid-column: span 8}
+    .col-4{grid-column: span 4}
+    @media (max-width: 980px){ .col-8,.col-4{grid-column: span 12} .hero .copy{max-width:88%} }
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)); border:1px solid var(--line);border-radius:18px;padding:18px}
+    h2{font-size:20px;margin:6px 0 12px 0}
+    .muted{color:var(--muted)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;color:var(--muted)}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{padding:10px 14px;background:var(--btn);color:var(--btnText);border-radius:12px;font-weight:700}
+    .btn.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}
+    .kv{display:grid;grid-template-columns: repeat(3,1fr);gap:10px}
+    .kv .item{border:1px dashed var(--line);border-radius:14px;padding:14px;text-align:center}
+    .kv .num{font-size:22px;color:var(--accent);font-weight:800}
+    .kv .cap{font-size:12px;color:var(--muted)}
+    .product{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .p{border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+    .p img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .pcontent{padding:12px}
+    .p h3{margin:0 0 6px 0;font-size:16px}
+    .spec{font-size:12px;line-height:1.6;color:var(--muted)}
+    .more{margin-top:8px;display:flex;gap:8px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .story{font-size:14px;color:#dfeee7;line-height:1.9;white-space:pre-line}
+    .footer{margin:28px 0 18px 0;text-align:center;color:var(--muted);font-size:12px}
+    .split{height:1px;background:var(--line);margin:16px 0}
+    .ribbon{border-left:4px solid var(--gold);padding-left:12px}
+    .notice{font-size:12px;color:#bcd2c6}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand">
+        <div class="logo">印</div>
+        <div class="brandname">
+          <b>开州印</b>
+          <span>KAIZHOUYIN</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#story">品牌故事</a>
+        <a href="#product">开州贡珍</a>
+        <a href="#brew">冲泡建议</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="./assets/hero.jpg" alt="hero"/>
+      <div class="overlay"></div>
+      <div class="badge">一城山水 · 一罐人情</div>
+      <div class="copy">
+        <div class="kicker">KAIZHOUYIN</div>
+        <h1 class="heroTitle">千年贡茶，源自龙珠山</h1>
+        <div class="slogan">开州贡珍，承续唐宋贡茶遗韵，以高山云雾之润、嘉陵清流之养，成就一叶清香。</div>
+        <div class="btns">
+          <a class="btn" href="#product">立即查看产品</a>
+          <a class="btn secondary" href="#story">阅读品牌故事</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="col-8 card" id="story">
+        <h2 class="ribbon">品牌故事</h2>
+        <p class="story">千年贡茶，源自龙珠山。
+开州贡珍，承续唐宋贡茶遗韵，以高山云雾之润、嘉陵清流之养，成就一叶清香。
+每一罐开州贡珍，皆为开州龙珠山脉的鲜叶精制而成，只为还原最纯粹的开州味道。</p>
+        <div class="split"></div>
+        <div class="kv">
+          <div class="item"><div class="num">海拔 1000m</div><div class="cap">高山云雾带</div></div>
+          <div class="item"><div class="num">明前 · 谷雨</div><div class="cap">手工精采</div></div>
+          <div class="item"><div class="num">一级工艺</div><div class="cap">传承焙制</div></div>
+        </div>
+      </section>
+
+      <aside class="col-4 card" id="contact">
+        <h2>联系方式</h2>
+        <div class="tags">
+          <span class="tag">开州贡珍</span>
+          <span class="tag">龙珠山高山茶</span>
+          <span class="tag">国风礼茶</span>
+        </div>
+        <p class="muted" style="margin-top:8px">商务合作 / 大宗订制</p>
+        <div class="cta">
+          <a class="btn" href="mailto:you@example.com">邮箱咨询</a>
+          <a class="btn secondary" href="https://wa.me/123456789" target="_blank">WhatsApp</a>
+        </div>
+        <p class="notice">* 上线后，这里可以改成你的微信二维码图片或客服链接。</p>
+      </aside>
+    </div>
+
+    <section class="card" id="product">
+      <h2 class="ribbon">单品｜开州贡珍</h2>
+      <div class="product">
+        <div class="p">
+          <img src="https://images.unsplash.com/photo-1507915135761-41a0a222c709?q=80&w=1200" alt="开州贡珍">
+          <div class="pcontent">
+            <h3>开州贡珍 · 明前嫩芽</h3>
+            <div class="spec">产地：重庆开州 · 龙珠山脉<br>等级：特级<br>香型：兰花香 · 花果清甜<br>工艺：轻发酵 · 慢焙提香<br>净含量：50g / 罐</div>
+            <div class="more">
+              <a class="btn" href="#brew">冲泡指南</a>
+              <a class="btn secondary" href="#">了解更多</a>
+            </div>
+          </div>
+        </div>
+        <div class="p">
+          <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200" alt="开州贡珍">
+          <div class="pcontent">
+            <h3>开州贡珍 · 雨前幼叶</h3>
+            <div class="spec">产地：重庆开州 · 龙珠山脉<br>等级：一级<br>香型：清鲜甘润<br>工艺：炭焙与热风复合<br>净含量：100g / 罐</div>
+            <div class="more">
+              <a class="btn" href="#brew">冲泡指南</a>
+              <a class="btn secondary" href="#">了解更多</a>
+            </div>
+          </div>
+        </div>
+        <div class="p">
+          <img src="https://images.unsplash.com/photo-1583407722446-1c7800e8eea6?q=80&w=1200" alt="礼盒">
+          <div class="pcontent">
+            <h3>开州贡珍礼盒</h3>
+            <div class="spec">礼赠场景：商务 · 亲友 · 节庆<br>搭配：50g×2 / 100g×2 多规格可选<br>包装：纸罐 + 硬盒，支持烫金烫银</div>
+            <div class="more">
+              <a class="btn" href="#contact">咨询订制</a>
+              <a class="btn secondary" href="#">更多图集</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="brew">
+      <h2 class="ribbon">冲泡建议</h2>
+      <div class="grid">
+        <div class="col-4">
+          <div class="kv item"><div class="num">水温 85–90℃</div><div class="cap">山泉/纯净水为佳</div></div>
+        </div>
+        <div class="col-4">
+          <div class="kv item"><div class="num">投茶 3–4g</div><div class="cap">150–200ml 盖碗/玻璃杯</div></div>
+        </div>
+        <div class="col-4">
+          <div class="kv item"><div class="num">出汤 8–12s</div><div class="cap">可续泡 5–7 冲</div></div>
+        </div>
+      </div>
+      <p class="notice">提示：先温杯，注水沿杯壁轻转，出汤不闷不焖，方得花果清香。</p>
+    </section>
+
+    <section class="card">
+      <h2 class="ribbon">溯源与品质</h2>
+      <div class="grid">
+        <div class="col-8">
+          <p class="muted">原料来自龙珠山脉核心茶园，海拔约 1000 米。通过批次留样与轻量化追溯编码，确保每一罐开州贡珍都有据可查。</p>
+        </div>
+        <div class="col-4">
+          <div class="kv item"><div class="num">批次追溯</div><div class="cap">扫码可查</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">© <span id="y"></span> 开州印 KAIZHOUYIN · 一城山水 · 一罐人情</div>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
